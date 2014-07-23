@@ -1,0 +1,16 @@
+extends layout
+
+block content
+	h1 Welcome to Magellans Voyage!
+	.voyageLocations
+		//- for location in voyageLocation
+		.location
+			h2=voyageLocation.location
+			p
+				b Year:  
+				| #{voyageLocation.year}
+			p
+				b Next Location:  
+				| #{voyageLocation.nextLocation}
+
+			a.submit(href='#{voyageLocation.nextLocation}') Next	
