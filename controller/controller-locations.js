@@ -14,11 +14,14 @@ var controller = {
 			if (location[i].location === target){
 				res.render('index', {
 					voyageLocation: location[i]
+				})
+			}	
+			else {
+				res.render('notalocation',{
+					notLocation: target
 				});
-
-			}
+			}	
 		};
 	},
-	
 }
 module.exports=controller
